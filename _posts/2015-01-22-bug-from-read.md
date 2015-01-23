@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTFM: A bug caused by read
-tags: [lxc, pipe, read, linux, core]
+tags: ["lxc", "pipe", "read", "linux", "core"]
 ---
 {% include JB/setup %}
 
