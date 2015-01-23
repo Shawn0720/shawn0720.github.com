@@ -129,6 +129,7 @@ JB :
   # where [HELPER] is the name of the helper you are overriding.
   
   # New markdown interpreter
-  markdown: kramdown
-  kramdown:
-      input: GFM
+  markdown: redcarpet
+  # Make redcarpet behave like GitHub Flavored Markdown
+  redcarpet:
+      extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
