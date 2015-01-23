@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: post
 published: false
 title: RTFM: A bug caused by read
 excerpt:
 tags: lxc pipe read linux core
 ---
+{% include JB/setup %}
 
 This is a bug coming up in work. It's very interesting and it's a good example of why we need to stick to good coding style. Also, always remember, when issue comes up, remember to RTFM.
 
