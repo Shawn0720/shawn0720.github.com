@@ -10,11 +10,11 @@ This is a bug coming up in work. It's very interesting and it's a good example o
 
 Here is the related code snippet (simplified version):
 
-```
+```c
 // fd is opened correctly
 // buffer has enough space and it has been stuffed with 0s
 int read_from_fd (FILE* fd, char* buffer, size_t buf_size) {
-    int nd = 0;
+    size_t nd = 0;
     nd = read(fd, buffer, buf_size);
     if (nd < 0) {
         // error handling
@@ -35,11 +35,11 @@ So, (nd < 0) is not enough. It is advisable to check (nd == buf_size) too.
 
 Here is a fixed version:
 
-```
+```c
 // fd is opened correctly
 // buffer has enough space and it has been stuffed with 0s
 int read_from_fd (FILE* fd, char* buffer, size_t buf_size) {
-    int nd = 0;
+    size_t nd = 0;
     while (nd != buf_size)
         nd += read(fd, buffer + nd, buf_size - nd);
         if (nd < 0) {
