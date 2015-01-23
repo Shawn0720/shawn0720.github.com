@@ -130,4 +130,5 @@ JB :
   
   # New markdown interpreter
   markdown: kramdown
-
+  kramdown:
+      input: GFM
