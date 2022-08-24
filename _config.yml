@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+highlighter: Rouge
 # posts per page where you use pagination
 paginate: 2
 
@@ -30,5 +30,5 @@ author :
 production_url : http://Shawn0720.github.io
 
 # New markdown interpreter
-markdown: redcarpet
+markdown: kramdown
 
